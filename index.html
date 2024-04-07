@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Шаблон плавающий</title>
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /* Стиль заголовка */
+  .header {
+    background-color: #e3e6ff;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+  }
+
+  /* Создайте три одинаковых столбца, которые плавают рядом друг с другом */
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 1000px;
+    height: 300px; /* Должен быть удален. Только для демонстрации */
+  }
+  .row{
+    background-color: #fffce3;
+    padding-left: 100px;
+    padding-top: 50px;
+  }
+  .row1{
+    background-color: #e3ffee;
+    padding-left: 450px;
+  }
+  /* Очистить поплавки после колонн */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Стиль нижнего колонтитула */
+  .footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Отзывчивый макет - делает три колонки стек поверх друг друга, а не рядом друг с другом */
+  @media (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+  }
+  </style>
+ </head>
+ <body>
+
+  <div class="header">
+    <h2>Кибербезопасность</h2>
+  </div>
+  <div class="row">
+    <img src="cyber4.jpg" alt="Итальянские Трулли" style="width:801px;height:600px;">
+    <img src="cyber1.png" alt="Итальянские Трулли" style="width:903px;height:600px;">
+  </div>
+  <div class="row1">
+    <img src="cyber2.jpeg" alt="Итальянские Трулли" style="width:950px;height:554px;">
+  </div>
+  <div class="footer">
+    <p>Создатель:Малютин Роман</p>
+  </div>
+
+ </body>
+</html>
